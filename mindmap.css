@@ -1,0 +1,602 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Oswald:wght@400&family=Poppins&display=swap');
+:root {
+   --card1:#173753;
+   --card2:#40A29C;
+   --card3:#145DA2;
+   --card4:#1894F8;
+   --grid-gap: 1rem; 
+ }
+.container{
+max-width: 768px;
+padding: 2rem;
+margin: auto;
+position: relative;
+}
+.card-container{
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   place-items: center;
+   gap:2rem;
+}
+.card{
+   height:4rem;
+   width:9rem;
+   padding: 0.6rem;
+   color:#fff;
+   justify-content: center;
+   align-items: start;
+   position: relative;
+   display:flex;
+   flex-direction: column;
+   font-family: 'Oswald', sans-serif;
+   font-size: smaller;
+}
+.card-body{
+   display: inline-flex;
+   width: 9rem;
+   justify-content: space-between;
+}
+.underline{
+   position: absolute;
+   height: 2px;
+   width: calc(100% - 1.2rem);
+   background-color:aqua;
+   bottom: 1rem;
+
+}
+.nodes{
+ display:grid; 
+ grid-template-columns: repeat(9,1fr);
+ place-items: start;
+ gap: calc(var(--grid-gap)*0.5);
+ color: white;
+ font-family: 'Fira Sans Condensed',sans-serif;
+ font-size: x-small;
+}
+.nodes>div{ 
+ display:grid;
+ align-items: center;
+ position: relative;
+}
+.nodes>div>span{
+ padding-block: 0.4rem;
+ padding-inline: 0.7rem;
+ border-radius: 0.25rem;
+ width: 3.5rem;
+}
+.nodes>div>.eco {
+ position:absolute;
+ top:4rem;
+}
+.nodes>div>.industry{
+ position:absolute;
+ top:4rem;
+}
+
+.line-container{
+ display: grid;
+ grid-template-columns: repeat(4,1fr);
+ place-items: center;
+ gap:2rem;
+ height:4rem;
+}
+.lines{
+ width: 3rem;
+ height: 0.15rem;
+ position: relative;
+ transform: rotate(90deg);
+}
+.lines.tax{
+    width: 2.2rem;
+    height: 0.15rem;
+    position: relative;
+    transform: rotate(90deg);
+}
+.lines::before{
+ content: "";
+ width: 0.5rem;
+ height: 0.5rem;
+ border: 0.25rem solid var(--card1);
+ background-color: #fff;
+ border-radius: 50%;
+ position: absolute;
+ top: -0.35rem;
+}
+.line-container .eco::before{
+    content: "";
+    border: 0.25rem solid var(--card2);
+}
+.line-container .industry::before{
+    content: "";
+    border: 0.25rem solid var(--card3);
+}
+.line-container .tax::before{
+    content: "";
+    border: 0.25rem solid var(--card4);
+    left:-0.5rem;
+}
+
+.lines::after {
+    content: "";
+    width: 10rem;
+    height: 0.1rem;
+    position: absolute;
+    left: -2rem;
+    top: -2.5rem;
+    transform: rotate(90deg);
+    background-color: inherit;
+}
+.line-container  .eco::after{
+ content: "";
+ width: 26rem;
+ height: 0.1rem;
+    left: -10rem;
+    top: -10rem
+}
+.line-container  .industry::after{
+ content: "";
+ width: 10rem;
+ height: 0.1rem;
+    left: -3rem;
+    top: 0rem;
+ 
+}
+.line-container  .tax::after{
+ content: "";
+ width: 5.5rem;
+ height: 0.1rem;
+    left:-0.5rem;
+    top:-0.2rem
+}
+.arrow-container{
+height:2rem;
+}
+.arrow{
+    box-sizing: border-box;
+    position: absolute;
+    display: block;
+    
+}
+.arrow::after,
+.arrow::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 4px
+}
+.arrow::after {
+    width: 8px;
+    height: 8px;
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+    transform: rotate(-45deg);
+    left: 7px
+}
+.arrow::before {
+    width: 2px;
+    height: 2rem;
+    left: 10px;
+    background: currentColor
+}
+.arrow1{
+    width: 22px;
+    height: 22px;
+    top: 11.5rem;
+    left:4rem;
+   color: var(--card1)
+}
+.arrow2{
+    width: 22px;
+    height: 22px;
+    top: 11.5rem;
+    left: 9rem;
+    color: var(--card1)
+}
+.arrow3{
+    width: 22px;
+    height: 22px;
+    top: 11.5rem;
+    left: 14rem;
+    color: var(--card1)
+}
+.arrow4{
+    width: 22px;
+    height: 22px;
+    top: 11.5rem;
+    left: 16rem;
+    color: var(--card2)
+}
+.arrow5{
+    width: 22px;
+    height: 6.8rem;
+    top: 10.4rem;
+    left: 19rem;
+    color: var(--card2)
+}
+.arrow.arrow5::before {
+    width: 2px;
+    height: 6.4rem;
+    left: 10px;
+    background: currentColor
+}
+.arrow6{
+    width: 22px;
+    height: 6.8rem;
+    top: 10.3rem;
+    left: 26rem;
+    color: var(--card2)
+}
+.arrow.arrow6::before {
+    width: 2px;
+    height: 6.2rem;
+    left: 10px;
+    background: currentColor
+}
+.arrow7{
+    width: 22px;
+    height: 6.8rem;
+    top: 10.3rem;
+    left: 26.5rem;
+    color: var(--card3)
+}
+.arrow.arrow7::before {
+    width: 2px;
+    height: 7.2rem;
+    left: 10px;
+    background: currentColor
+}
+.arrow8{
+    width: 22px;
+      height: 6.8rem;
+      top: 10.3rem;
+      left: 31rem;
+      color: var(--card2)
+  }
+  .arrow.arrow8::before {
+      width: 2px;
+      height: 6.2rem;
+      left: 10px;
+      background: currentColor
+  }
+.arrow9{
+    width: 22px;
+    height: 6.8rem;
+    top: 10.3rem;
+    left: 31.5rem;
+    color: var(--card3)
+}
+.arrow.arrow9::before {
+    width: 2px;
+    height: 7.2rem;
+    left: 10px;
+    background: currentColor;
+}
+.arrow10{
+  width: 22px;
+    height: 6.8rem;
+    top: 10.3rem;
+    left: 36rem;
+    color: var(--card2)
+}
+.arrow.arrow10::before {
+    width: 2px;
+    height: 6.2rem;
+    left: 10px;
+    background: currentColor
+}
+.arrow11{
+    width: 22px;
+    height: 6.8rem;
+    top: 10.3rem;
+    left: 36.5rem;
+    color: var(--card3)
+}
+
+.arrow.arrow11::before {
+    width: 2px;
+    height: 7.2rem;
+    left: 10px;
+    background: currentColor
+}
+.arrow12{
+    width: 22px;
+    height: 22px;
+    top: 11.5rem;
+    left: 42rem;
+    color: var(--card2)
+}
+.arrow13{
+    width: 22px;
+    height: 10px;
+    top: 12.2rem;
+    left: 41.5rem;
+    color: var(--card4)
+}
+.arrow.arrow13::before {
+    width: 2px;
+    height: 2.3rem;
+    left: 10px;
+    background: currentColor
+}
+.arrow14{
+    width: 22px;
+    height: 10px;
+    top: 12.2rem;
+    left: 47rem;
+    color: var(--card4)
+}
+.arrow.arrow14::before {
+    width: 2px;
+    height: 2.3rem;
+    left: 10px;
+    background: currentColor
+}
+
+.connect-container{
+ display: grid;
+ grid-template-columns: repeat(3,1fr);
+ place-items: center;
+ gap:4rem;
+ position: relative;
+ z-index: -1;
+}
+.connect{
+    width: 3rem;
+    height: 0.15rem;
+    position: relative;
+    border-top: 0.15rem dotted var(--card2);
+}
+.connect::after,
+.connect::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+}
+.connect::after {
+    left: 10px;
+    border: 0.1rem dotted var(--card2);
+    position: absolute;
+}
+.connect::before {
+    left: 40px;
+    border: 0.1rem dotted var(--card2)
+}
+.connect1{
+ width: 22rem;
+ position: absolute;
+ top: 5rem ;
+ left: 3rem;
+}
+.connect1::before{
+    content: "";
+    height: 7rem;
+    position: absolute;
+    left: 0rem;
+    top:-7rem;
+}
+.connect1::after{
+    content: "";
+ height: 4rem;
+ position: absolute;
+ left: 22rem;
+ top:-4rem;
+}
+.connect2{
+ width: 22rem;
+ position: absolute;
+ top: 6rem ;
+ left: 8rem;
+}
+.connect2::before {
+    height: 8rem;
+    content: "";
+    position: absolute;
+    left: 0rem;
+    top:-8rem;
+}
+.connect2::after{
+    content: "";
+    height: 4rem;
+    position: absolute;
+    left: 22rem;
+    top:-4rem;
+}
+.connect3{
+ width: 21rem;
+ position: absolute;
+ top: 8rem;
+ left: 14rem;
+}
+.connect3::before {
+    height: 9rem;
+    content: "";
+    position: absolute;
+    left: 0rem;
+    top:-9rem;
+}
+.connect3::after{
+    content: "";
+ height: 6rem;
+ position: absolute;
+ left: 21rem;
+ top:-6rem;
+}
+.connect4{
+    width: 8rem;
+    position: absolute;
+    top: 2rem;
+    left: 9rem;
+    transform: rotate(90deg);
+   }
+.health{
+ background-color: var(--card1);
+}
+.eco{
+ background-color:var(--card2);
+}
+.industry{
+   background-color:var(--card3);
+}
+.tax{
+   background-color:var(--card4);
+} 
+
+/* mobile-responsive  */
+
+@media (max-width:960px){
+   .container{
+     display: grid;
+     grid-template-columns: repeat(4,1fr);
+     width:360px;
+     position: relative;
+   }
+   .card-container{
+     grid-template-columns: auto;
+       grid-template-rows: repeat(4,1fr);
+       gap:2.5rem;
+   }
+   .nodes{
+     display:grid;
+     grid-template-columns: auto;
+     grid-template-rows: repeat(9,1fr);
+     align-items: start;
+     position: absolute;
+     top:2.5rem;
+     left:19rem;
+   }
+   .nodes>div>.eco{
+     top:0;
+   }
+   .nodes>div>.industry{
+     top:0;
+   }
+   .line-container{
+    position: absolute;
+    top:5.3rem;
+    left:12rem;
+    transform: rotate(270deg) scaleX(-1) scale(0.7);
+    height:auto;
+    width:4rem;
+    gap:8rem;
+   }
+   .line-container .eco::after{
+     width:23rem;
+     top: -8.5rem;
+     left:-8.5rem;
+   }
+   .arrow-container{
+    top:-1.5rem;
+    position: relative;
+    transform: rotate(270deg) scaleX(-1) scale(0.7);
+    left:-5.9rem;
+  }
+  .arrow::before{
+    height:4rem;
+  }
+  .arrow1{
+    top:13.5rem;
+  }
+  .arrow2{
+    top:13.5rem;
+  }
+  .arrow3{
+    top:13.5rem;
+  }
+  .arrow4{
+    top:13.5rem;
+    left: 14.5rem;
+}
+.arrow5{
+    top:8rem;
+    left: 18.5rem;
+}
+.arrow.arrow5::before {
+    height: 4rem;
+}
+.arrow6{
+    top: 8rem;
+    left: 22.5rem;
+}
+.arrow.arrow6::before {
+    height: 4rem;
+}
+.arrow7{
+    top: 8rem;
+    left: 23.5rem;
+    color: var(--card3)
+}
+.arrow.arrow7::before {
+    height: 5rem;
+}
+.arrow8{
+    width: 22px;
+      height: 6.8rem;
+      top: 8rem;
+      left: 27.5rem;
+      color: var(--card2)
+  }
+  .arrow.arrow8::before {
+      width: 2px;
+      height: 4rem;
+      left: 10px;
+      background: currentColor
+  }
+  .arrow9{
+    top: 8rem;
+    left: 28.3rem;
+    color: var(--card3)
+}
+.arrow.arrow9::before {
+    height: 5rem;
+}
+.arrow10{
+    width: 22px;
+      height: 6.8rem;
+      top: 8rem;
+      left: 32.5rem;
+      color: var(--card2)
+  }
+  .arrow.arrow10::before {
+      width: 2px;
+      height: 4rem;
+      left: 10px;
+      background: currentColor
+  }
+.arrow11{
+    top: 8rem;
+    left: 33.3rem;
+    color: var(--card3)
+}
+.arrow.arrow11::before {
+    height: 5rem;
+}
+.arrow12{
+    width: 22px;
+    height: 22px;
+    top: 13.5rem;
+    left: 37.5rem;
+    color: var(--card2)
+}
+   
+ .arrow13{
+    top: 14.2rem;
+    left: 36.5rem;
+    color: var(--card2)
+}
+.arrow.arrow13::before {
+    height:4.3rem;
+}
+.arrow14{
+    top: 14.2rem;
+    left: 42rem;
+    color: var(--card2)
+}
+.arrow.arrow14::before {
+    height:4.3rem;
+}
+   .connect-container{
+     display: none;
+   }
+}

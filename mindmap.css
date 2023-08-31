@@ -52,6 +52,7 @@ position: relative;
  color: white;
  font-family: 'Fira Sans Condensed',sans-serif;
  font-size: x-small;
+ cursor: pointer;
 }
 .nodes>div{ 
  display:grid;
@@ -63,7 +64,18 @@ position: relative;
  padding-inline: 0.7rem;
  border-radius: 0.25rem;
  width: 3.5rem;
+ transition: background-color 0.3s ease, transform 0.2s ease;
 }
+.nodes>div>span:hover{
+   background-color:#5897fa;
+   box-shadow: inset;
+  transform: scale(1.05);
+  box-shadow: 0 0 3px var(--card1);
+}
+.nodes>div>span:active{
+    background-color:var(--card1);
+   transform: scale(1.05);
+ }
 .nodes>div>.eco {
  position:absolute;
  top:4rem;
@@ -183,7 +195,7 @@ height:2rem;
     width: 22px;
     height: 22px;
     top: 11.5rem;
-    left:4rem;
+    left:4.05rem;
    color: var(--card1)
 }
 .arrow2{
@@ -197,21 +209,21 @@ height:2rem;
     width: 22px;
     height: 22px;
     top: 11.5rem;
-    left: 14rem;
+    left: 14.05rem;
     color: var(--card1)
 }
 .arrow4{
     width: 22px;
     height: 22px;
     top: 11.5rem;
-    left: 16rem;
+    left: 16.1rem;
     color: var(--card2)
 }
 .arrow5{
     width: 22px;
     height: 6.8rem;
     top: 10.4rem;
-    left: 19rem;
+    left: 19.05rem;
     color: var(--card2)
 }
 .arrow.arrow5::before {
@@ -237,7 +249,7 @@ height:2rem;
     width: 22px;
     height: 6.8rem;
     top: 10.3rem;
-    left: 26.5rem;
+    left: 26.6rem;
     color: var(--card3)
 }
 .arrow.arrow7::before {
@@ -263,7 +275,7 @@ height:2rem;
     width: 22px;
     height: 6.8rem;
     top: 10.3rem;
-    left: 31.5rem;
+    left: 31.55rem;
     color: var(--card3)
 }
 .arrow.arrow9::before {
@@ -289,7 +301,7 @@ height:2rem;
     width: 22px;
     height: 6.8rem;
     top: 10.3rem;
-    left: 36.5rem;
+    left: 36.55rem;
     color: var(--card3)
 }
 
@@ -303,7 +315,7 @@ height:2rem;
     width: 22px;
     height: 22px;
     top: 11.5rem;
-    left: 42rem;
+    left: 42.05rem;
     color: var(--card2)
 }
 .arrow13{
@@ -384,7 +396,7 @@ height:2rem;
  top:-4rem;
 }
 .connect2{
- width: 22rem;
+ width: 10rem;
  position: absolute;
  top: 6rem ;
  left: 8rem;
@@ -400,7 +412,7 @@ height:2rem;
     content: "";
     height: 4rem;
     position: absolute;
-    left: 22rem;
+    left: 10rem;
     top:-4rem;
 }
 .connect3{
@@ -497,12 +509,14 @@ height:2rem;
   }
   .arrow1{
     top:13.5rem;
+    left:4rem;
   }
   .arrow2{
     top:13.5rem;
   }
   .arrow3{
     top:13.5rem;
+    left:13.9rem;
   }
   .arrow4{
     top:13.5rem;
@@ -545,7 +559,7 @@ height:2rem;
   }
   .arrow9{
     top: 8rem;
-    left: 28.3rem;
+    left: 28.45rem;
     color: var(--card3)
 }
 .arrow.arrow9::before {
@@ -566,7 +580,7 @@ height:2rem;
   }
 .arrow11{
     top: 8rem;
-    left: 33.3rem;
+    left: 33.5rem;
     color: var(--card3)
 }
 .arrow.arrow11::before {
@@ -576,7 +590,7 @@ height:2rem;
     width: 22px;
     height: 22px;
     top: 13.5rem;
-    left: 37.5rem;
+    left: 37.4rem;
     color: var(--card2)
 }
    
@@ -597,6 +611,23 @@ height:2rem;
     height:4.3rem;
 }
    .connect-container{
-     display: none;
+    position: absolute;
+    transform: rotate(270deg) scaleX(-1) scale(0.7);
+    top:3.5rem;
+    left:18rem;
+   }
+   .connect1{
+    width: 19.5rem;
+   }
+   .connect1::after{
+       content: "";
+    left: 19.5rem;
+   }
+   .connect3{
+    width: 19rem;
+   }
+   .connect3::after{
+       content: "";
+    left: 19rem;
    }
 }
